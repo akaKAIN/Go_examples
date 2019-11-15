@@ -20,6 +20,7 @@ Point:
 	if _, err := fmt.Scan(&count); err != nil {
 		log.Printf("Ошибка ввода данных пользователем:\n%s", err)
 		goto Point
+		break
 	}
 	startTime := time.Now()
 	var accs = _struct.Creator(count)
