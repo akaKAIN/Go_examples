@@ -41,5 +41,5 @@ OpenLoop:
 			"Время выполенения  служебных процессов - ")
 	}
 	endTime := time.Now()
-	fmt.Print(endTime.Sub(startTime))
+	fmt.Printf("%v\n", endTime.Sub(startTime))
 }
