@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8bcc7182-2961-49b9-9e35-3e5a29f13a1f" name="Default Changelist" comment="" />
+    <list default="true" id="8bcc7182-2961-49b9-9e35-3e5a29f13a1f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/examples/gorutene/gorutene.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/examples/methods/methods.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/examples/panic/panic.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/examples/types/types.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDataGenerator.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/struct/struct.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/struct/struct.go" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +26,11 @@
     </option>
   </component>
   <component name="GOROOT" path="$USER_HOME$/go/go1.13.4" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1TNQSCnZ3rMebwRpgP9HRIwHA7D" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -44,50 +58,74 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go">
-    <configuration name="go build Interfaces" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build examples/gorutene">
+    <configuration name="go build examples/gorutene" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="GogoProgect" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/src/Interfaces/main.go" />
-      <package value="Interfaces" />
+      <filePath value="$PROJECT_DIR$/src/examples/gorutene/gorutene.go" />
+      <package value="examples/gorutene" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build log.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build examples/panic" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="GogoProgect" />
       <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/src/examples/log/log.go" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/src/examples/panic/panic.go" />
+      <package value="examples/panic" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build examples/types" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="GogoProgect" />
       <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/main.go" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/src/examples/types/types.go" />
+      <package value="examples/types" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build pathing.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build gorutene.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="GogoProgect" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/src/examples/pathing/pathing.go" />
+      <filePath value="$PROJECT_DIR$/src/examples/gorutene/gorutene.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build methods.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="GogoProgect" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/examples/methods/methods.go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build main.go" />
-        <item itemvalue="Go Build.go build Interfaces" />
-        <item itemvalue="Go Build.go build pathing.go" />
-        <item itemvalue="Go Build.go build log.go" />
+        <item itemvalue="Go Build.go build examples/gorutene" />
+        <item itemvalue="Go Build.go build gorutene.go" />
+        <item itemvalue="Go Build.go build examples/types" />
+        <item itemvalue="Go Build.go build examples/panic" />
+        <item itemvalue="Go Build.go build methods.go" />
       </list>
     </recent_temporary>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

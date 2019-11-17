@@ -11,16 +11,16 @@ var (
 	lastNameList  = [] string{"Ivanov", "Trebiany", "Lee", "Mikl", "Donavan"}
 )
 
-var idPerson, idAccount = 1, 1
+var idPerson, idAccount uint32 = 1, 1
 
 type Person struct {
-	Id   int    `json:"id"`
+	Id   uint32    `json:"id"`
 	Name string `json:"name"`
-	Age  int    `json:"age"`
+	Age  uint8    `json:"age"`
 }
 
 type Account struct {
-	Id             int                 `json:"id"`
+	Id             uint32                 `json:"id"`
 	Login          string              `json:"login"`
 	Owner          Person              `json:"owner"`
 }
@@ -29,7 +29,7 @@ func init() {
 	rand.Seed(time.Now().UnixNano())
 }
 
-func CreatePerson(incomingName string, incomingAge int) Person {
+func CreatePerson(incomingName string, incomingAge uint8) Person {
 	var newPerson = Person{
 		Id:   idPerson,
 		Name: incomingName,
@@ -50,13 +50,14 @@ func CreateAccount(person Person) Account {
 	return newAccount
 }
 
-func generatePersonList(count int) []Person {
+func generatePersonList(count uint32) []Person {
 	//Минимальный-максимальный возраст для структуры Person- (12 - 80)
 	var minAge, maxAge = 12, 80
 	var personStorage []Person
-	for i := 0; i < count; i++ {
+	var i uint32
+	for i = 0; i < count; i++ {
 		fullName := lastNameList[rand.Intn(len(lastNameList))] + " " + firstNameList[rand.Intn(len(firstNameList))]
-		age := minAge + rand.Intn(maxAge-minAge+1)
+		age := uint8(minAge + rand.Intn(maxAge-minAge+1))
 		personStorage = append(personStorage, CreatePerson(fullName, age))
 	}
 	return personStorage
@@ -70,7 +71,7 @@ func generateAccountList(personList []Person) []Account {
 	return accountStorage
 }
 
-func Creator(personCount int) []Account {
+func Creator(personCount uint32) []Account {
 	persons := generatePersonList(personCount)
 	accounts := generateAccountList(persons)
 

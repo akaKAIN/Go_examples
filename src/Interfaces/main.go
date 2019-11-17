@@ -1,36 +1,55 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+)
 
-//Объявление интерфейса
 type Payer interface {
-	Pay(int) error
+	Pay(uint32) error
+	Raplenishment(uint32) error
 }
-
-//Объявление структуры "Кошелька"
 type Wallet struct {
-	Cash int
+	Cash uint32
 }
 
-func (w *Wallet) Pay(amount int) error {
+
+func (w *Wallet) Pay(amount uint32) error {
 	if w.Cash < amount {
-		return fmt.Errorf("Недостаточно денег в кошельке.")
+		return fmt.Errorf("Не хватает денег в кошельке")
 	}
 	w.Cash -= amount
 	return nil
 }
 
-func Buy(p Payer){
-	if err := p.Pay(10); err != nil {
-		panic(err)
+func (w *Wallet) Replenishment(amount uint32) error {
+	point := w.Cash
+	fmt.Printf("Befor: point=%d, w.Cash=%d", point, w.Cash)
+	w.Cash += amount
+	fmt.Printf("After: point=%d, w.Cash=%d", point, w.Cash)
+	if point == w.Cash {
+		return fmt.Errorf("Ошибка зачисления")
 	}
-	fmt.Printf("Спасибо за покупку через %T.\n\n", p)
+	return nil
 }
 
-func main(){
+func Buy(p Payer){
+	if err := p.Pay(95); err != nil {
+		panic(err)
+	}
+	fmt.Printf("Спасибо за покупку через %T\n\n", p)
+}
+
+func Repl(p Payer){
+	if err := p.Raplenishment(40); err != nil {
+		panic(err)
+	}
+	fmt.Print("Money in ...")
+}
+
+func main() {
 	myWallet := &Wallet{Cash: 100}
 	Buy(myWallet)
-
-	var myMoney Payer
-	myMoney = &
+	log.Printf("В кошельке oсталось %d", myWallet.Cash)
+	Repl(myWallet)
 }

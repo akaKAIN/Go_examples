@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"examples/struct"
 	"fmt"
+	"image/gif"
 	"io/ioutil"
 	"log"
 	"os"
@@ -11,19 +12,19 @@ import (
 )
 
 func main() {
-	var count int
 	const fileName = "data.json"
 
 	fmt.Printf("Запущена программа создания учетных записей. Все созданные записи сохранятся в файле в формате <json>\n\n")
 Point:
+	var count = new(uint32)
 	fmt.Println("Введите количество создаваемых учетных записей (число):")
 	if _, err := fmt.Scan(&count); err != nil {
-		log.Printf("Ошибка ввода данных пользователем:\n%s", err)
+		log.Printf("Ошибка ввода данных:\n%s", err)
 		goto Point
-		break
+
 	}
 	startTime := time.Now()
-	var accs = _struct.Creator(count)
+	var accs = _struct.Creator(*count)
 	rawData, err := json.MarshalIndent(accs, "", "  ")
 	if err != nil {
 		log.Fatal("Ошибка Ident:\n", err)
@@ -43,4 +44,5 @@ OpenLoop:
 	}
 	endTime := time.Now()
 	fmt.Printf("%v\n", endTime.Sub(startTime))
+	gif.Decode()
 }

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "login": "Lee Bred-49",
+    "owner": {
+      "id": 1,
+      "name": "Lee Bred",
+      "age": 49
+    }
+  },
+  {
+    "id": 2,
+    "login": "Ivanov Bred-48",
+    "owner": {
+      "id": 2,
+      "name": "Ivanov Bred",
+      "age": 48
+    }
+  }
+]
